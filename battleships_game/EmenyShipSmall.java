@@ -18,6 +18,7 @@ public class EmenyShipSmall extends EmenyShip
         turnAtEdge();
         lookForShip(1);
         lookForOtherActor(EmenyShip.class);
+        lookForOtherActor(Rock.class);
         checkIfShipIsToDamaged();
         int temp = Greenfoot.getRandomNumber(5);
         if(temp == 2)

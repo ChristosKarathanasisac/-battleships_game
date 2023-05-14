@@ -9,18 +9,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class SeaLevel1 extends Sea
 {
 
-    /**
-     * Constructor for objects of class SeaLevel1.
-     * 
-     */
+    private MyShip ship = new MyShip(5,5,new GreenfootImage("myShip_destroyed.png"));
     public SeaLevel1()
     {
         addWavesOnSea();
+        addObject(ship, getWidth()/2 + 100, getHeight()/2);
         addShips();
         addBars();
     }
     
-    public void addWavesOnSea()
+    private void addWavesOnSea()
     {
         GreenfootImage background = getBackground();
         background.setColor(new Color(18, 113, 222));
@@ -30,15 +28,16 @@ public class SeaLevel1 extends Sea
             wave.draw();
         }  
     }
-    public void addShips()
+    private void addShips()
     {
-        MyShip ship = new MyShip(5,5,new GreenfootImage("myShip_destroyed.png"));
-        //ship.setLife(10);
-        addObject(ship, getWidth()/2 + 100, getHeight()/2);
         int h = Greenfoot.getRandomNumber(300);
         
         emenyShipGenerator(90,h,new EmenyShipMedium());
         emenyShipGenerator(90,h+150,new EmenyShipSmall());
         emenyShipGenerator(90,h+300,new EmenyShipMedium());
+    }
+    public MyShip getMyShip()
+    {
+        return ship;
     }
 }
