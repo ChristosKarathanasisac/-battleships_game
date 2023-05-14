@@ -11,6 +11,7 @@ public class Sea extends World
     private Counter healthCounter;
     private HealthBar healthBar = new HealthBar();
     private Counter counter  = new Counter();
+    private LifeCounter lCounter = new LifeCounter();
     
     public Sea()
     {    
@@ -29,11 +30,32 @@ public class Sea extends World
         emenyShipGenerator(90,Greenfoot.getRandomNumber(600),new EmenyShipMedium(15,1,10,new GreenfootImage("shipM_destroyed.png")));
         emenyShipGenerator(90,Greenfoot.getRandomNumber(600),new EmenyShipMedium(15,1,10,new GreenfootImage("shipM_destroyed.png")));
         
-        addObject(healthBar,50, 20);
-        addObject(counter,180, 20);
+        addHealthBar(healthBar);
+        addLifeCounter(lCounter);
+        addCounter(counter);
         
     }
     
+    public void addHealthBar(HealthBar hBar)
+    {
+        addObject(hBar,50, 20);
+    }
+    
+    public void replaceHealthBar()
+    {
+        removeObject(healthBar);
+        this.healthBar =  new HealthBar();
+        addObject(healthBar,50, 20);
+    }
+    
+    public void addCounter(Counter c)
+    {
+        addObject(c,310, 20);
+    }
+    public void addLifeCounter(LifeCounter lCounter)
+    {
+        addObject(lCounter,180, 20);
+    }
     public void emenyShipGenerator(int w, int h,EmenyShip emenyShip)
     {
         addObject(emenyShip, w, h);
@@ -48,7 +70,10 @@ public class Sea extends World
     {
         return healthBar;
     }
-    
+    public LifeCounter getLifeCounter()
+    {
+        return lCounter;
+    }
      private void addWaves()
     {
         addObject(new Wave(1,600,100), 0, 0);

@@ -7,5 +7,4 @@ comment2.params=speed\ rotation\ d
 comment2.target=Bullet(Vector,\ int,\ int)
 comment3.params=
 comment3.target=boolean\ atWorldEdge()
-comment3.text=public\ void\ checkIfGoOutOfWorld()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ if(atWorldEdge())\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ getWorld().removeObject(this);\r\n\ \ \ \ \ \ \ \ }\r\n}
 numComments=4

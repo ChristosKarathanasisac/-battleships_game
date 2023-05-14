@@ -22,14 +22,7 @@ public abstract class Bullet extends SmoothMover
         setRotation(rotation);
         addForce(new Vector(rotation, 15));
     }
-    
-    /*public void checkIfGoOutOfWorld()
-    {
-        if(atWorldEdge())
-        {
-            getWorld().removeObject(this);
-        }
-    }*/
+
     
     public boolean atWorldEdge()
     {

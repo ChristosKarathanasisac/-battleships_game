@@ -67,11 +67,21 @@ public class MyShip extends Ship
         World myWorld = getWorld();
         Sea sea = (Sea)myWorld;
         HealthBar healthBar = sea.getHealthBar();
+        LifeCounter lifeCounter = sea.getLifeCounter();
         healthBar.loseHealth(damage);
         if(healthBar.health <= 0)
         {
-            breakUp();
-            sea.gameOver();
+            if(lifeCounter.lifes>0)
+            {
+                lifeCounter.reduceLife();
+                sea.replaceHealthBar();
+            }
+            else
+            {
+               breakUp();
+               sea.gameOver(); 
+            }
+            
         }
         
     }
