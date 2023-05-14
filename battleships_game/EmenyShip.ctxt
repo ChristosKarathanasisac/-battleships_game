@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=EmenyShip
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ EmenyShip\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=_gunReloadTime\ _reloadDelayCount\ _life\ _destroyed_ship
+comment1.target=EmenyShip(int,\ int,\ int,\ greenfoot.GreenfootImage)
+comment10.params=
+comment10.target=void\ hit()
+comment11.params=
+comment11.target=void\ breakUp()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=damage
+comment3.target=void\ lookForShip(int)
+comment4.params=
+comment4.target=boolean\ scanForShip()
+comment5.params=
+comment5.target=void\ checkIfShipIsToDamaged()
+comment6.params=cls
+comment6.target=void\ lookForOtherActor(java.lang.Class)
+comment7.params=
+comment7.target=boolean\ atWorldEdge()
+comment8.params=
+comment8.target=void\ turnAtEdge()
+comment9.params=
+comment9.target=void\ randomTurn()
+numComments=12

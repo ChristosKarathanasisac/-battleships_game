@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Ship
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Ship\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=_gunReloadTime\ _reloadDelayCount\ _life\ _destroyed_ship
+comment1.target=Ship(int,\ int,\ int,\ greenfoot.GreenfootImage)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=l
+comment3.target=int\ getLife(int)
+comment4.params=l
+comment4.target=void\ setLife(int)
+comment5.params=bullet
+comment5.target=void\ fire(Bullet)
+numComments=6

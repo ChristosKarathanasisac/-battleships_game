@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Counter
+comment0.text=\r\n\ Counter\ that\ displays\ a\ text\ and\ number.\r\n\ \r\n\ @author\ Michael\ Kolling\r\n\ @version\ 1.0.1\r\n
+comment1.params=
+comment1.target=Counter()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=add_score
+comment3.target=void\ addScore(int)
+numComments=4
