@@ -1,10 +1,10 @@
 import greenfoot.*;
 
 public class HealthBar extends Actor {
-    int health = 20;
-    int initial_health  =20;
-    int healthBarWidth = 80;
-    int healthBarHeight = 15;
+    int health = 50;
+    int initial_health  =50;
+    int healthBarWidth = 200;
+    int healthBarHeight = 30;
     int pixelsPerHealthPoint = (int)healthBarWidth/health;
     
     public HealthBar()

@@ -32,7 +32,7 @@ public class WelcomeMsg extends Actor
     {
         if(Greenfoot.isKeyDown("s"))
         {
-            Greenfoot.setWorld(new Sea());
+            Greenfoot.setWorld(new SeaLevel1());
         }
     }
 

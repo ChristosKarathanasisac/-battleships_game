@@ -1,25 +1,25 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class EmenyShipMedium here.
+ * Write a description of class EmenyShipLarge here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class EmenyShipMedium extends EmenyShip
+public class EmenyShipLarge extends EmenyShip
 {
-    public EmenyShipMedium()
+    public EmenyShipLarge()
     {
-        super(15,1,15,new GreenfootImage("shipM_destroyed.png"));
+        super(15,2,30,new GreenfootImage("shipL_destroyed.png"));
     } 
     public void act()
     {
-        move(3);
+        move(2);
         turnAtEdge();
-        lookForShip(2);
+        lookForShip(4);
         lookForOtherActor(EmenyShip.class);
         checkIfShipIsToDamaged();
-        int temp = Greenfoot.getRandomNumber(5);
+        int temp = Greenfoot.getRandomNumber(10);
         if(temp == 2)
         {
             if(!lock)
@@ -35,9 +35,9 @@ public class EmenyShipMedium extends EmenyShip
     {
         Greenfoot.playSound("Explosion.wav");
         Sea sea = (Sea) getWorld();
-        sea.emenyShipGenerator(70,Greenfoot.getRandomNumber(400),new EmenyShipMedium());
+        sea.emenyShipGenerator(70,Greenfoot.getRandomNumber(400),new EmenyShipLarge());
         Counter counter = sea.getCounter();
-        counter.addScore(2);
+        counter.addScore(6);
         //--------------------------
         setImage(explosion);
         Greenfoot.delay(1);

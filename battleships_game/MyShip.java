@@ -10,7 +10,7 @@ public class MyShip extends Ship
 {
     public MyShip(int _gunReloadTime,int _reloadDelayCount,GreenfootImage _destroyed_ship)
     {
-        super(_gunReloadTime,_reloadDelayCount,30,_destroyed_ship);
+        super(_gunReloadTime,_reloadDelayCount,40,_destroyed_ship);
     } 
     public void act()
     {
