@@ -43,33 +43,6 @@ public class EmenyShipMedium extends EmenyShip
        setImage(explosion);
        Greenfoot.delay(1);
        getWorld().removeObject(this);
-        /*Greenfoot.playSound("Explosion.wav");
-        Sea sea = (Sea) getWorld();
-        if(sea.getClass() == SeaLevel1.class)
-        {
-        SeaLevel1 seaLevel1 = (SeaLevel1) sea;
-        seaLevel1.emenyShipGenerator(70,Greenfoot.getRandomNumber(400),new EmenyShipMedium());
-        Counter counter = seaLevel1.getCounter();
-        counter.addScore(2);
-        //--------------------------
-        setImage(explosion);
-        Greenfoot.delay(1);
-        getWorld().removeObject(this); 
-        }
-        else
-        {
-        SeaLevel2 seaLevel2 = (SeaLevel2) sea;
-        seaLevel2.emenyShipGenerator(70,Greenfoot.getRandomNumber(400),new EmenyShipMedium());
-        Counter counter = seaLevel2.getCounter();
-        counter.addScore(2);
-        //--------------------------
-        setImage(explosion);
-        Greenfoot.delay(1);
-        getWorld().removeObject(this); 
-        }
-        */
-        
-       
-       
+
     }
 }

@@ -26,7 +26,7 @@ public class Counter extends Actor
     public void addScore(int add_score)
     {
         score += add_score;
-        if((score > 10) && flag)
+        if((score > 2) && flag)
         {
             Sea sea = (Sea) getWorld();
              

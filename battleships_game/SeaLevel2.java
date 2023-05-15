@@ -17,12 +17,15 @@ public class SeaLevel2 extends Sea
     {
         super.level  = 2;
         addWavesOnSea();
+        addRocks();
         addShips();
         addObject(mShip, getWidth()/2 + 100, getHeight()/2);
-        addRocks();
-        addHealthBar(hBar);
-        addCounter(c);
-        addLifeCounter(lCounter);
+        super.healthBar = hBar;
+        addHealthBar(super.healthBar);
+        super.counter = c;
+        addCounter(super.counter);
+        super.lCounter = lCounter;
+        addLifeCounter(super.lCounter);
         
     }
     

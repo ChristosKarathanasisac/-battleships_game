@@ -8,11 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class Sea extends World
 {
-    private Counter healthCounter;
-    private HealthBar healthBar = new HealthBar();
-    private Counter counter  = new Counter();
-    private LifeCounter lCounter = new LifeCounter();
-    public int level;
+    protected Counter healthCounter;
+    protected HealthBar healthBar = new HealthBar();
+    protected Counter counter  = new Counter();
+    protected LifeCounter lCounter = new LifeCounter();
+    protected int level;
     public Sea()
     {    
         super(1200, 800, 1);
