@@ -39,7 +39,7 @@ public class SeaLevel1 extends Sea
     {
         int h = Greenfoot.getRandomNumber(300);
         
-        emenyShipGenerator(90,h,new EmenyShipMedium());
+        emenyShipGenerator(90,h+400,new EmenyShipMedium());
         emenyShipGenerator(90,h+150,new EmenyShipSmall());
         emenyShipGenerator(90,h+300,new EmenyShipMedium());
     }

@@ -18,6 +18,7 @@ public class MyShip extends Ship
         checkKeys();
         checkIfShipIsToDamaged();
         lookForEmenyShip(EmenyShip.class);
+        lookForRock(Rock.class);
         reloadDelayCount++;
     }
     private void checkKeys() 
@@ -75,6 +76,7 @@ public class MyShip extends Ship
             {
                 lifeCounter.reduceLife();
                 sea.replaceHealthBar();
+                setImage(new GreenfootImage("myShip.png"));
             }
             else
             {
@@ -93,9 +95,18 @@ public class MyShip extends Ship
         if(emShip != null)
         {
            emShip.breakUp();
-           //Sea sea = (Sea) getWorld();
-           //sea.emenyShipGenerator(70,Greenfoot.getRandomNumber(600));
            hit(5);
+        }
+    }
+    
+     private void lookForRock(Class cls)
+    {
+        Actor actor = getOneObjectAtOffset(0,0,cls);
+        Rock rock = (Rock) actor;
+        if(rock != null)
+        {
+           rock.breakUp();
+           hit(10);
         }
     }
     

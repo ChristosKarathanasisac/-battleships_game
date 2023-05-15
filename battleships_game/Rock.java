@@ -16,4 +16,10 @@ public class Rock extends Actor
     {
         // Add your action code here.
     }
+    
+    public void breakUp() 
+    {
+       Greenfoot.playSound("rock_break.wav");
+       getWorld().removeObject(this);
+    }
 }
