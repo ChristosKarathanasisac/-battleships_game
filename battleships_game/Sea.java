@@ -34,7 +34,7 @@ public abstract class Sea extends World
     {
         removeObject(healthBar);
         this.healthBar =  new HealthBar();
-        addObject(healthBar,50, 20);
+        addObject(healthBar,150, 20);
     }
     
     public void addCounter(Counter c)
