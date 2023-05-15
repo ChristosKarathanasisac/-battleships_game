@@ -93,7 +93,7 @@ public class MyShip extends Ship
         if(emShip != null)
         {
            emShip.breakUp();
-           Sea sea = (Sea) getWorld();
+           //Sea sea = (Sea) getWorld();
            //sea.emenyShipGenerator(70,Greenfoot.getRandomNumber(600));
            hit(5);
         }

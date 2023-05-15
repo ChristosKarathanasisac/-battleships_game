@@ -12,8 +12,8 @@ import java.util.Calendar;
  */
 public class WelcomeMsg extends Actor
 {
-    public static final float FONT_SIZE = 40.0f;
-    public static final int WIDTH = 800;
+    public static final float FONT_SIZE = 38.0f;
+    public static final int WIDTH = 1000;
     public static final int HEIGHT = 600;
     
     /**
@@ -25,7 +25,7 @@ public class WelcomeMsg extends Actor
      */
     public WelcomeMsg()
     {
-        makeImage("Welcome", "Score: ");
+        makeImage();
     }
     
     public void act()
@@ -39,7 +39,7 @@ public class WelcomeMsg extends Actor
     /**
      * Make the score board image.
      */
-    private void makeImage(String title, String prefix)
+    private void makeImage()
     {
         GreenfootImage image = new GreenfootImage(WIDTH, HEIGHT);
 
@@ -51,8 +51,12 @@ public class WelcomeMsg extends Actor
         font = font.deriveFont(FONT_SIZE);
         image.setFont(font);
         image.setColor(Color.WHITE);
-        image.drawString(title, 60, 100);
-        image.drawString(prefix + "test", 60, 200);
+        image.drawString("Welcome to Battleships!!!", 100, 100);
+        image.drawString("Move with UP RIGHT and LEFT buttons", 100, 200);
+        image.drawString("Slow down with BACK button", 100, 300);
+        image.drawString("Fire with SPACE", 100, 400);
+        image.drawString("Press 's' to START", 100, 500);
+        
         setImage(image);
     }
 }

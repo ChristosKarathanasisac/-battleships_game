@@ -12,7 +12,7 @@ public abstract class Sea extends World
     private HealthBar healthBar = new HealthBar();
     private Counter counter  = new Counter();
     private LifeCounter lCounter = new LifeCounter();
-    
+    public int level;
     public Sea()
     {    
         super(1200, 800, 1);

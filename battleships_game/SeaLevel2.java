@@ -15,6 +15,7 @@ public class SeaLevel2 extends Sea
      */
     public SeaLevel2(HealthBar hBar,Counter c, LifeCounter lCounter, MyShip mShip)
     {
+        super.level  = 2;
         addWavesOnSea();
         addShips();
         addObject(mShip, getWidth()/2 + 100, getHeight()/2);

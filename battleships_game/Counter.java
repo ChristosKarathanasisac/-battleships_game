@@ -12,6 +12,7 @@ import java.awt.Graphics;
 public class Counter extends Actor
 {
     int score = 0;
+    boolean flag = true;
     
    public Counter()
    {
@@ -25,5 +26,17 @@ public class Counter extends Actor
     public void addScore(int add_score)
     {
         score += add_score;
+        if((score > 2) && flag)
+        {
+            Sea sea = (Sea) getWorld();
+             
+            //if(sea.getClass() == SeaLevel1.class)
+            //{
+               SeaLevel1  seaLevel1 =  (SeaLevel1) getWorld();
+               //seaLevel1.removeObjects(seaLevel1.getObjects(null));
+               Greenfoot.setWorld(new SeaLevel2(seaLevel1.getHealthBar(),seaLevel1.getCounter(),seaLevel1.getLifeCounter(),seaLevel1.getMyShip()));
+            //}
+            flag  = false;
+        }
     }
 }

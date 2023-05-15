@@ -10,8 +10,11 @@ public class SeaLevel1 extends Sea
 {
 
     private MyShip ship = new MyShip(5,5,new GreenfootImage("myShip_destroyed.png"));
+    private boolean drawWaves = true; 
+    
     public SeaLevel1()
     {
+        super.level  = 1;
         addWavesOnSea();
         addObject(ship, getWidth()/2 + 100, getHeight()/2);
         addShips();
@@ -24,9 +27,13 @@ public class SeaLevel1 extends Sea
         background.setColor(new Color(18, 113, 222));
         background.fill();
         addWaves();
-        for (Wave wave : getObjects(Wave.class)) {
+        if(drawWaves)
+        {
+            for (Wave wave : getObjects(Wave.class)) {
             wave.draw();
         }  
+        }
+        
     }
     private void addShips()
     {
@@ -38,6 +45,8 @@ public class SeaLevel1 extends Sea
     }
     public MyShip getMyShip()
     {
+        drawWaves = false;
+        //removeObject();
         return ship;
     }
 }
